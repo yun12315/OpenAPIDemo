@@ -1,0 +1,15 @@
+# 替换 YOUR_LAOZHANG_API_KEY 为您在laozhang.ai获取的API密钥
+API_KEY="sk-uFrGq0AZe5mrHIkS9d7d08166aD84c2cB813Aa20613966De" 
+
+curl https://api.laozhang.ai/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer sk-uFrGq0AZe5mrHIkS9d7d08166aD84c2cB813Aa20613966De" \
+  -d '{
+    "model": "gemini-2.5-pro-preview-05-06",  
+    "stream": false,
+    "messages": [
+      {"role": "system", "content": "You are a helpful assistant that provides concise answers."},
+      {"role": "user", "content": "如何免费使用Gemini 2.5 Pro API？请提供至少两种方法。"}
+    ]
+  }'
+     
